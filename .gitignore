@@ -1,0 +1,5 @@
+static
+media
+__pycache__
+node_modules
+migrations

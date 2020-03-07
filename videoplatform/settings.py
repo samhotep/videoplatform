@@ -33,11 +33,13 @@ DATABASE_USER = ''
 DATABASE_PASSWORD = ''
 DATABASE_HOST = ''
 
+# Use etc.settings_prod for production
 from etc.settings_dev import *
 
 # Application definition
 
 INSTALLED_APPS = [
+    'videoapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -131,5 +133,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
+# Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

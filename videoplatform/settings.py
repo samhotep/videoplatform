@@ -25,8 +25,15 @@ SECRET_KEY = 'y$4+hmrij4-dp2esep)v-qm6$uj&1*zk5rsgbqa^7+l-gusmsb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+# Database settings
+DATABASE_NAME = ''
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+DATABASE_HOST = ''
+
+from etc.settings_dev import *
 
 # Application definition
 
@@ -75,8 +82,12 @@ WSGI_APPLICATION = 'videoplatform.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        "NAME": DATABASE_NAME,
+        "USER": DATABASE_USER,
+        "PASSWORD": DATABASE_PASSWORD,
+        "HOST": DATABASE_HOST,
+        "PORT": "3306",
     }
 }
 

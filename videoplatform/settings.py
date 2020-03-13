@@ -40,6 +40,7 @@ from etc.settings_dev import *
 
 INSTALLED_APPS = [
     'videoapp',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -136,3 +137,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# Rest framework settings
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": (
+        # Testing
+        'rest_framework.permissions.AllowAny',
+        # Production
+        #"rest_framework.permissions.IsAuthenticated",
+    ),
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        #'rest_framework.authentication.SessionAuthentication',
+        "rest_framework.authentication.TokenAuthentication",
+    ),
+}

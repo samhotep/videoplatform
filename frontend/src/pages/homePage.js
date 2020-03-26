@@ -1,14 +1,13 @@
 import React from 'react';
-import ContainerRow from '../components/containerRow';
-import ContainerColumn from '../components/containerColumn';
 import TitleBar from '../components/headers/titleBar';
+import Container from '../containers/container';
+import styled from 'styled-components';
 
-function HomePage(){
+function HomePage(props){
     return (
-        <ContainerColumn>
-            <TitleBar />
-        </ContainerColumn>
-
+        <Container>
+            <TitleBar/>
+        </Container>
     )
 }
 

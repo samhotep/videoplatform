@@ -1,20 +1,22 @@
 import React from "react";
-//import { TitleBar } from "../components/headers";
+import styled from 'styled-components';
 
 function TitleItem(props){
     return (
-        <div style={styles.container}>
+        <Item>
             {props.name}
-        </div>
+        </Item>
     )
 }
 
-const styles = {
-    container: {
-        padding: 10,
-        margin: 10
-    }
+const Item = styled.div`
+    padding: 10px;
+    margin: 10px;
+    color: white;
 
-}
+    &:hover {
+        background-color: #b71c1c;
+    }
+`
 
 export default TitleItem;

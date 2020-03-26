@@ -36,7 +36,9 @@ function App() {
 
 function App() {
   return (
-    <HomePage />
+    <div>
+      <HomePage />
+    </div>
   );
 }
 
